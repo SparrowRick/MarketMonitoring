@@ -150,19 +150,19 @@
             <p class="text-gray-400 text-xs sm:text-sm mt-2 sm:mt-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
                 <span>数据源：东财股吧</span>
                 <span class="hidden sm:inline text-gray-500">|</span>
-                <span class="text-gray-500">分析日 2026-10-18（帖子/情绪） <span class="text-[10px] text-gray-600">（分析 2026-10-18 的数据，2026-10-19 凌晨跑完）</span></span>
+                <span class="text-gray-500">分析日 2026-10-19（帖子/情绪） <span class="text-[10px] text-gray-600">（分析 2026-10-19 的数据，2026-10-20 凌晨跑完）</span></span>
                 <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
             </p>
         </div>
         <div class="glass-card mobile-card px-4 py-2.5 rounded-xl border border-gray-800 flex items-center gap-4 text-sm text-gray-300 w-full md:w-auto shrink-0">
             <div>
                 <span class="text-gray-400 text-xs block">任务完成时间（北京时间）</span>
-                <span class="font-mono text-teal-400 font-semibold">2026-10-19 02:49:45</span>
+                <span class="font-mono text-teal-400 font-semibold">2026-10-20 05:14:06</span>
             </div>
             <div class="border-l border-gray-800 h-8"></div>
             <div>
                 <span class="text-gray-400 text-xs block">样本帖子数量</span>
-                <span class="font-mono text-indigo-400 font-semibold">729 篇</span>
+                <span class="font-mono text-indigo-400 font-semibold">4187 篇</span>
             </div>
         </div>
     </header>
@@ -180,7 +180,7 @@
                         <div class="gauge-container mb-3">
                             <div class="gauge-body"></div>
                             <div class="gauge-cover">
-                                <span class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white font-outfit" id="score-number">0.1035</span>
+                                <span class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white font-outfit" id="score-number">-0.0888</span>
                                 <span class="text-[10px] text-gray-500 mt-0.5 font-mono">[-1.0, 1.0]</span>
                             </div>
                         </div>
@@ -192,19 +192,19 @@
                     <div class="border-t border-gray-800/60 pt-3">
                         <div class="flex justify-between items-center mb-2">
                             <h4 class="text-gray-500 text-[10px] font-semibold uppercase tracking-wider">帖子分类占比</h4>
-                            <span class="text-gray-600 text-[10px] font-mono">729 篇</span>
+                            <span class="text-gray-600 text-[10px] font-mono">4187 篇</span>
                         </div>
                         <div class="grid grid-cols-3 gap-1.5 mb-2">
                             <div class="bg-emerald-500/8 border border-emerald-500/15 rounded-lg p-1.5 text-center">
-                                <span class="text-lg font-extrabold text-emerald-400 font-mono">80</span>
+                                <span class="text-lg font-extrabold text-emerald-400 font-mono">455</span>
                                 <span class="text-[10px] text-emerald-400/60 block">看多</span>
                             </div>
                             <div class="bg-gray-800/20 border border-gray-700/20 rounded-lg p-1.5 text-center">
-                                <span class="text-lg font-extrabold text-gray-300 font-mono">576</span>
+                                <span class="text-lg font-extrabold text-gray-300 font-mono">3296</span>
                                 <span class="text-[10px] text-gray-500 block">中性</span>
                             </div>
                             <div class="bg-red-500/8 border border-red-500/15 rounded-lg p-1.5 text-center">
-                                <span class="text-lg font-extrabold text-red-400 font-mono">73</span>
+                                <span class="text-lg font-extrabold text-red-400 font-mono">433</span>
                                 <span class="text-[10px] text-red-400/60 block">看空</span>
                             </div>
                         </div>
@@ -213,9 +213,9 @@
                             <span>看空 (10%)</span>
                         </div>
                         <div class="h-1.5 w-full bg-gray-800/60 rounded-full overflow-hidden flex">
-                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-l-full" style="width: 11.0%"></div>
-                            <div class="bg-gray-700/50 h-full" style="width: 79.0%"></div>
-                            <div class="bg-gradient-to-r from-rose-500 to-red-500 h-full rounded-r-full" style="width: 10.0%"></div>
+                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-l-full" style="width: 10.9%"></div>
+                            <div class="bg-gray-700/50 h-full" style="width: 78.7%"></div>
+                            <div class="bg-gradient-to-r from-rose-500 to-red-500 h-full rounded-r-full" style="width: 10.3%"></div>
                         </div>
                     </div>
                 </div>
@@ -410,7 +410,7 @@
         let rawPosts = [];
         
         // Setup Score Gauge Animation
-        const score = 0.1035;
+        const score = -0.0888;
 
         async function loadPosts() {
             const tbody = document.getElementById("posts-table-body");
@@ -490,14 +490,14 @@
         
         const chartData = {
             hourly: {
-                labels: ["10/18 01:00", "10/18 02:00", "10/18 03:00", "10/18 04:00", "10/18 05:00", "10/18 06:00", "10/18 07:00", "10/18 08:00", "10/18 09:00", "10/18 10:00", "10/18 11:00", "10/18 12:00"],
-                tooltips: ["2026-10-18 01:00", "2026-10-18 02:00", "2026-10-18 03:00", "2026-10-18 04:00", "2026-10-18 05:00", "2026-10-18 06:00", "2026-10-18 07:00", "2026-10-18 08:00", "2026-10-18 09:00", "2026-10-18 10:00", "2026-10-18 11:00", "2026-10-18 12:00"],
-                scores: [0.0111, 0.0215, 0.0376, 0.2088, 0.0294, 0.0862, 0.0125, 0.0353, 0.2211, 0.3217, 0.0565, -0.1346]
+                labels: ["10/19 01:00", "10/19 02:00", "10/19 03:00", "10/19 04:00", "10/19 05:00", "10/19 06:00", "10/19 07:00", "10/19 08:00", "10/19 09:00", "10/19 10:00", "10/19 11:00", "10/19 12:00"],
+                tooltips: ["2026-10-19 01:00", "2026-10-19 02:00", "2026-10-19 03:00", "2026-10-19 04:00", "2026-10-19 05:00", "2026-10-19 06:00", "2026-10-19 07:00", "2026-10-19 08:00", "2026-10-19 09:00", "2026-10-19 10:00", "2026-10-19 11:00", "2026-10-19 12:00"],
+                scores: [-0.0278, 0.0324, 0.1043, 0.2513, -0.1723, 0.1996, 0.0493, 0.1098, -0.7539, 0.1274, 0.0437, 0.0331]
             },
             daily: {
-                labels: ["10\u67085\u65e5", "10\u67086\u65e5", "10\u67087\u65e5", "10\u67088\u65e5", "10\u67089\u65e5", "10\u670810\u65e5", "10\u670811\u65e5", "10\u670812\u65e5", "10\u670813\u65e5", "10\u670814\u65e5", "10\u670815\u65e5", "10\u670816\u65e5", "10\u670817\u65e5", "10\u670818\u65e5"],
-                tooltips: ["2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-10", "2026-10-11", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17", "2026-10-18"],
-                scores: [0.2047, 0.0189, 0.0042, -0.0405, 0.0929, 0.5014, 0.0871, 0.01, -0.0932, -0.1089, -0.1395, -0.0394, -0.0091, 0.1035]
+                labels: ["10\u67086\u65e5", "10\u67087\u65e5", "10\u67088\u65e5", "10\u67089\u65e5", "10\u670810\u65e5", "10\u670811\u65e5", "10\u670812\u65e5", "10\u670813\u65e5", "10\u670814\u65e5", "10\u670815\u65e5", "10\u670816\u65e5", "10\u670817\u65e5", "10\u670818\u65e5", "10\u670819\u65e5"],
+                tooltips: ["2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-10", "2026-10-11", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17", "2026-10-18", "2026-10-19"],
+                scores: [0.0189, 0.0042, -0.0405, 0.0929, 0.5014, 0.0871, 0.01, -0.0932, -0.1089, -0.1395, -0.0394, -0.0091, 0.1035, -0.0888]
             }
         };
 
@@ -602,9 +602,9 @@
             new Chart(bullCtx, {
                 type: 'bar',
                 data: {
-                    labels: ["\u53cd\u5f39", "\u5229\u597d", "\u725b\u5e02", "\u5927\u6da8", "\u6da8\u505c", "\u6ee1\u4ed3", "\u4e70\u5165", "\u89c1\u5e95", "\u6284\u5e95", "\u4f01\u7a33", "\u52a0\u4ed3", "\u56de\u6696", "\u7ffb\u500d", "\u8d77\u98de", "\u591a\u5934"],
+                    labels: ["\u53cd\u5f39", "\u6284\u5e95", "\u5927\u6da8", "\u62c9\u5347", "\u5229\u597d", "\u725b\u5e02", "\u6da8\u505c", "\u4e70\u5165", "\u6ee1\u4ed3", "\u52a0\u4ed3", "\u51b2", "\u53cd\u8f6c", "\u7ea2\u76d8", "\u8865\u4ed3", "\u8d77\u98de"],
                     datasets: [{
-                        data: [29, 13, 10, 6, 5, 4, 4, 4, 4, 3, 2, 2, 2, 2, 2],
+                        data: [159, 51, 46, 45, 35, 34, 24, 21, 20, 20, 20, 14, 13, 12, 9],
                         backgroundColor: 'rgba(16, 185, 129, 0.75)',
                         borderColor: '#10b981',
                         borderWidth: 1,
@@ -626,9 +626,9 @@
             new Chart(bearCtx, {
                 type: 'bar',
                 data: {
-                    labels: ["\u5927\u8dcc", "\u66b4\u8dcc", "\u718a\u5e02", "\u5272\u8089", "\u5356\u51fa", "\u770b\u7a7a", "\u4e0d-\u6284\u5e95", "\u8bbd-\u53cd\u5f39", "\u8df3\u6c34", "\u51fa\u8d27", "\u6e05\u4ed3", "\u6740\u8dcc", "\u5229\u7a7a", "\u8dd1\u8def", "\u8170\u65a9"],
+                    labels: ["\u8df3\u6c34", "\u5927\u8dcc", "\u8bf1\u591a", "\u718a\u5e02", "\u8001\u4e61\u522b\u8d70", "\u9500\u6237", "\u6e05\u4ed3", "\u66b4\u8dcc", "\u4e0d\u73a9\u4e86", "\u51fa\u8d27", "\u8dcc\u505c", "\u8dd1\u8def", "\u7a7a\u5934", "\u5229\u7a7a", "\u5272\u8089"],
                     datasets: [{
-                        data: [13, 10, 8, 6, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3],
+                        data: [69, 55, 51, 38, 34, 32, 29, 20, 17, 17, 16, 14, 14, 12, 12],
                         backgroundColor: 'rgba(239, 68, 68, 0.75)',
                         borderColor: '#ef4444',
                         borderWidth: 1,
